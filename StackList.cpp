@@ -60,9 +60,32 @@ public:
     }
     
     void push(Lingkaran *item){
+	    item->next = NULL;
+	    if(isFull())
+	    {
+	    	cout<<"Stack Penuh"<<endl;
+	    }
+	    else
+	    {
+	    	item->next = top;
+	    	top = item;
+	    }
     }
     
     void push(double radius){
+	    Lingkaran *baru;
+	    baru = new Lingkaran(radius);
+	    baru->radius = radius;
+	    baru->next = NULL;
+	    if(isFull())
+	    {
+	    	cout<<"Stack Penuh"<<endl;
+	    }
+	    else
+	    {
+	    	baru->next = top;
+	    	top = baru;
+	    }
     }
     
     Lingkaran *pop(){
