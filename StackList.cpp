@@ -63,12 +63,12 @@ public:
 	    item->next = NULL;
 	    if(isFull())
 	    {
-	    	cout<<"Stack Penuh"<<endl;
+		cout << "Stack Penuh" << endl;
 	    }
 	    else
 	    {
-	    	item->next = top;
-	    	top = item;
+		item->next = top;
+		    top = item;
 	    }
     }
     
@@ -79,12 +79,12 @@ public:
 	    baru->next = NULL;
 	    if(isFull())
 	    {
-	    	cout<<"Stack Penuh"<<endl;
+		cout << "Stack Penuh" << endl;
 	    }
 	    else
 	    {
-	    	baru->next = top;
-	    	top = baru;
+		baru->next = top;
+		top = baru;
 	    }
     }
     
