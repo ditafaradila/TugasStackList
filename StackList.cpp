@@ -37,11 +37,26 @@ public:
     ListStack(){
         top=NULL;
     }
-    
     bool isEmpty(){
+        return top == NULL;
     }
-    
     bool isFull(){
+        if(isEmpty() == 1)
+        {
+        	return 0;
+		}
+		else
+		{
+			Lingkaran *bantu;
+			int n;
+			bantu = top;
+			while (bantu != '\0')
+			{
+				n++;
+				bantu = bantu->next;
+			}
+			return n > MAX_STACK_SIZE - 1;
+		}
     }
     
     void push(Lingkaran *item){
