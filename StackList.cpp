@@ -89,9 +89,18 @@ public:
     }
     
     Lingkaran *pop(){
+        if (isEmpty()) {
+            cout<<"Stack Kosong"<<endl;
+            return NULL;
+        } else{
+        	Lingkaran *hapus;
+		    hapus = top;
+		    top = top->next;
+		    return hapus;
+		    delete hapus;
+		    top--;
+        }
     }
 };
 
-int main(){
-return 0;
-}
+
